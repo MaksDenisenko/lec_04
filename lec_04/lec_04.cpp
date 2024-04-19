@@ -3,15 +3,17 @@
 
 #include <iostream>
 
-void increment(int a)
+void increment(int* a)
 {
-    a = a + 1;
+    std::cout << a << "\n";
+    *a = *a + 1;
+    std::cout << *a << "\n";
 }
 
 int main()
 {
     int b = 3;
-    increment(b);
+    increment(&b);
     std::cout << b;
 }
 
